@@ -33,7 +33,6 @@ class Weather(Resource):
         
         return jsonify(weather)
 
-#Weather route
 api.add_resource(Weather, '/weather')
 
 
