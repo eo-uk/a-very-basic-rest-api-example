@@ -24,14 +24,14 @@ class Weather(Resource):
             except ValueError:
                 unit = 'Celsius' #Default to Celsius if unit is unknown
         
-        result = {
+        weather = {
             'temp': temp,
             'unit': unit,
             'city': city,
             'date': date,
         }
         
-        return jsonify(result)
+        return jsonify(weather)
 
 #Weather route
 api.add_resource(Weather, '/weather')
